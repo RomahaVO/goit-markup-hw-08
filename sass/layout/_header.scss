@@ -1,0 +1,321 @@
+.header{
+position: relative;
+}
+
+.header-logo{
+    font-family: 'Raleway', Tahoma, sans-serif;
+    color: var(--primery-text-color);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+
+    margin-right: 93px;
+    
+    @media screen and (min-width:480px) and (max-width:1199px) {
+        font-size: 24px;
+        }
+}
+
+.logo-akcent{
+    color: var(--akcent-color);
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    
+    @media screen and (min-width:480px) and (max-width:767px) {
+        min-height: 60px;;
+        }
+}
+
+.header-list{
+    @media screen and (min-width:320px) and (max-width:767px) {
+        display: none;
+        }
+
+
+
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    list-style: none;
+    letter-spacing: 0.02em;
+}
+
+.header-item{
+    position: relative;
+
+        &:not(:last-child){
+        margin-right: 50px;
+        }
+}
+
+.header-link{
+    color: var(--primery-text-color);
+    text-decoration: none;
+
+
+    
+    transform:  color var(--timing-function-trasition);
+
+        &:hover,
+        &:focus{
+        color: var(--akcent-color);
+        cursor: pointer;
+        }
+        
+        &.current {
+            color: var(--akcent-color);
+        }
+
+
+}
+
+.header-link.current::after{
+    content: '';
+    position: absolute;
+    
+    display: block;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--akcent-color);
+    left:0px;
+    bottom: -32px;
+}
+
+.header-connect{
+    margin-left: auto;
+
+    @media screen and (min-width:320px) and (max-width:767px) {
+        display: none;
+        }
+}
+
+.header-link-second{
+    display: flex;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    list-style: none;
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width:768px) {
+        flex-wrap: wrap;
+        margin-left: 84px;
+        }
+}
+
+.header-link-text{
+    display: flex;
+    color: var(--second-text-color);
+    text-decoration: none;
+    align-items: center;
+
+    transition:  color var(--timing-function-trasition);
+
+        &:hover,
+        &:focus{
+        color: var(--akcent-color);
+        cursor: pointer;
+    }
+}
+
+.header-link-tel{
+    margin-left: 30px;
+    display: flex;
+    color: var(--second-text-color);
+    text-decoration: none;
+    align-items: center;
+
+    transition:  color var(--timing-function-trasition);
+
+        &:hover,
+        &:focus{
+            color: var(--akcent-color);
+            cursor: pointer;
+        }
+
+        @media screen and (min-width:768px)and (max-width:1199px) {
+        margin-left: 0;
+        margin-top: 10px;
+        }    
+}
+
+.header-link-icon{
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.mob-menu-button-open {
+        @media screen and (min-width:320px) and (max-width:767px) {
+            display: block;
+            margin-left: auto;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+        
+            transition: fill var(--timing-function-trasition);
+    
+                &:hover,
+                &:focus{
+                fill: var(--akcent-color);
+                cursor: pointer;
+                    }
+            }
+        @media screen and (min-width:768px) {
+            display: none;
+            }
+}
+
+.mob-menu-button{
+    @media screen and (min-width:320px) and (max-width:767px) {
+        display: block;
+        margin-left: auto;
+        margin-top: 10px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+
+        transition: fill var(--timing-function-trasition);
+
+            &:hover,
+            &:focus{
+            fill: var(--akcent-color);
+            cursor: pointer;
+            }
+        }
+
+}
+
+.mob-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    
+        background-color: #ffffff;
+        width: 100vw;
+        height: 100vh;
+            padding-right: 15px;
+            padding-bottom: 48px;
+            padding-left: 40px;
+        .modal-menu-box{
+
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            transform: scale(1);
+            transition: transform var(--timing-function-trasition);
+        }
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+
+.mob-menu .is-hidden {
+transform: scale(0,8);
+}
+
+.mob-menu-top {
+    width: 100%;
+}
+
+
+.list {
+    list-style: none;
+}
+
+.mob-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: #212121;
+
+    transform:  color var(--timing-function-trasition);
+
+    &:hover,
+    &:focus{
+    color: var(--akcent-color);
+    // cursor: pointer;
+    }
+    
+    &.current {
+        color: var(--akcent-color);
+    }
+}
+
+.mob-item {
+    margin-bottom: 32px;
+
+    // &:last-child{
+    //     margin-bottom: ;
+    // }
+}
+
+.mob-link-tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--akcent-color);
+
+}
+
+.mob-link-text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+
+    color: #757575;
+    text-decoration: none;
+}
+
+.mob-link-item {
+    margin-bottom: 32px;  
+    
+    &:last-child{
+        margin-bottom: 64px;
+    }
+}
+
+.mob-socs-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: #2196F3;
+}
+
+.mob-socs {
+    display: flex;
+}
+
+.mob-socs-line{
+    width: 22px;
+    height: 0px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    // transform: rotate(90deg);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.no-scroll{
+    overflow: hidden;
+}

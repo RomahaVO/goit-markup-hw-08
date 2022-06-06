@@ -1,0 +1,118 @@
+.portfolio-list{
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px; 
+
+    @media screen and (min-width:320px) and (max-width:767px) {
+        display: block;
+        }
+}
+
+
+$value:1200px;
+
+.portfolio-list-item{
+    background: var(--title-white-color);
+    border: 1px solid #EEEEEE;
+
+    transition: box-shadow var(--timing-function-trasition);
+
+        &:hover{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        cursor: pointer;
+        }
+
+        width: calc($value / 3 ) -30px;
+        max-width: 100%;
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+    @media screen and (min-width:320px) and (max-width:767px) {
+        margin-bottom: 30px;
+        &:last-child{
+        margin-bottom: 0;
+        }
+    }
+    
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        &:nth-child(even){
+            margin-right: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (min-width:1200px) {
+        &:nth-child(3n +3){
+            margin-right: 0;
+            }
+                
+            &:nth-last-child(-n + 3){
+            margin-bottom: 0;
+            }
+    }
+}
+
+.portfolio-pictures{
+    max-width: 100%;
+}
+
+.portfolio-wrap{
+    position: relative;
+    overflow: hidden; 
+
+    @media screen and (min-width:320px) and (max-width:767px) {
+        width: 450px;
+    }
+}
+
+.portfolio-top-text{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 63px 24px 63px 24px;
+    background-color:rgba(33, 150, 243, 0.9);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: var(--title-white-color);
+
+    transform: translateY(100%);
+    transition: transform var(--timing-function-trasition);
+
+        .portfolio-list-item:hover &{
+        transform: translateY(0%);
+        }
+}
+
+.portfolio-text-block{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+}
+
+.portfolio-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        width: 306px;
+    
+        }
+}
+
+.portfolio-text{
+    color: var(--second-text-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+}

@@ -1,0 +1,226 @@
+.footer{
+    background-color: #2F303A;
+
+}
+
+.address{
+    display: flex;
+
+    @media screen and (min-width:320px) and (max-width:767px) {
+    display: block;
+        }
+    
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    @media screen and (min-width:1200px) {
+    }
+}
+
+.footer-cordenats{
+    @media screen and (min-width:320px) and (max-width:767px) {
+        text-align: center;
+        }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width:1200px) {
+    margin-right: 70px;
+    }
+}
+
+.footer-logo{
+    font-style: normal;
+    background-color: #2F303A;
+    font-family: 'Raleway', Tahoma, sans-serif;
+    color: var(--title-white-color);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    cursor: default;
+}
+
+.footer-list{
+    list-style: none;
+
+    margin-top: 20px;
+}
+
+.footer-item:nth-child(-n+2){
+    margin-bottom: 9px;
+}
+
+.footer-address{
+    font-style: normal;
+    background-color: #2F303A;
+    color: var(--title-white-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    cursor: default;
+}
+
+.footer-link, .footer-tel{
+    font-style: normal;
+    background-color: #2F303A;;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    cursor: default;
+} 
+
+.footer-conect{
+    display: flex;
+    flex-direction: column;
+    margin-right: 12px;
+
+    @media screen and (min-width:320px) and (max-width:767px) {
+        align-items: center;
+        margin-top: 60px;
+        }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: 0;
+    }
+
+}
+
+.conect-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1,2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-white-color);
+
+    align-items: baseline;
+}
+
+.conect-list{
+    display: flex;
+    list-style: none;
+}
+
+.conect-item{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 10px;
+    
+        &:last-child{
+        margin-right: 0;
+        }
+}
+
+.footer-link-icon{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: var(--title-white-color);
+
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color var(--timing-function-trasition);
+
+        &:hover,
+        &:focus{
+        background-color:var(--akcent-color);
+        }
+}
+
+.footer-subscription{
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width:320px) and (max-width:767px) {
+        align-items: center;
+        margin-top: 60px;
+        }
+    
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+    margin-top: 60px;
+    align-items: center;
+    }
+
+    @media screen and (min-width:1200px) {
+        // flex-direction: row;
+        margin-left: 93px;
+        margin-top: 0;
+    }
+
+}
+
+.footer-subscription-form{
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (min-width:1200px) {
+    flex-direction: row;
+    }
+
+}
+
+.footer-subscription-title{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-white-color);
+
+    margin-bottom: 20px;
+}
+
+.footer-subscription-mail{
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: rgba(47, 48, 58, 1);
+    padding-left: 16px;
+    color: var(--silver-icon);
+
+
+
+
+    transition: border-color var(--timing-function-trasition) ;
+
+        &:focus{
+        border-color:var(--akcent-color);
+        }
+        
+    @media screen and (min-width:320px) and (max-width:767px) {
+        width: 450px;
+        } 
+    
+    @media screen and (min-width:1200px) {
+    margin-right: 12px;
+    }  
+}
+
+.footer-icon-send{
+    margin-left: 10px;
+}

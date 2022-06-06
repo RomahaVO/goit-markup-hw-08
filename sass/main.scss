@@ -1,0 +1,28 @@
+@import"./base/reset.scss";
+@import"./base/common";
+
+@import"./components/conteiner";
+@import"./components/modal";
+@import"./components/backdrop";
+@import"./components/section";
+@import"./components/button-portfolio";
+@import"./components/footer-subscription-btn";
+@import"./components/hero-btn";
+
+@import"./layout/header";
+@import"./layout/hero";
+@import"./layout/benefits"; //calc think
+@import"./layout/about";
+@import"./layout/team";
+@import"./layout/client"; //calc
+@import"./layout/footer";
+@import"./layout/portfolio";
+
+@import"./layout/header-portfolio";
+
+
+
+@import"./utils/variables";
+@import"./utils/hidden";
+@import"./utils/mixin";
+
